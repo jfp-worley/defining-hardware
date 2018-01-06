@@ -1,4 +1,3 @@
-
 [HARDWARE OBJECT - extends quantifiable-entity]
 
 {
@@ -48,7 +47,7 @@ e.g.
 					"name": "thread size",
 					"description": "Screw thread sizes.",
 					"options": {
-						"metric": "$ref:entity/fabbed/dimension-collection/standard-metric-thread-sizes/options/M5",
+						"metric": ["$ref:entity/fabbed/dimension-collection/standard-metric-thread-sizes/options/M5"]
 					}
 				},
 				{
@@ -56,7 +55,7 @@ e.g.
 					"description": "screw head diameter",
 					"options": {
 						"unit-system": {
-							"metric": "$ref:entity/fabbed/unit/mm",
+							"metric": "$ref:entity/fabbed/unit/mm"
 						},
 					"quantity": "8.5"
 					}
@@ -66,7 +65,7 @@ e.g.
 					"description": "length of screw shaft excluding screw head",
 					"options": {
 						"unit-system": {
-							"metric": "$ref:entity/fabbed/unit/mm",
+							"metric": "$ref:entity/fabbed/unit/mm"
 						},
 					"quantity": "55"
 					}
