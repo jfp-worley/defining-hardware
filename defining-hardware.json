@@ -23,7 +23,7 @@ e.g.
 	"identifier": "screw",
 	"description": "Short, slender, sharp-pointed metal pins with a raised helical thread running around it and a slotted head, used to join things together by being rotated so that it pierces wood or other material and is held tightly in place.",
 	"version": "1.0.0",
-	"type": "$ref:schema/fabbed/hardware-family/fixings",
+	"hardware-type": "$ref:schema/fabbed/hardware-family/fixings",
 	"options": {
 		"choices": {
 			"name": "choices",
@@ -54,8 +54,8 @@ e.g.
 					"name": "thread size",
 					"description": "Screw thread sizes.",
 					"options": {
-						"metric": "$ref:entity/fabbed/dimension-collection/standard-metric-thread-sizes",
-						"imperial" "$ref:entity/fabbed/dimension-collection/standard-imperial-thread-sizes"
+						"metric": "$ref:entity/fabbed/dimension-collection/standard-metric-thread-sizes/options",
+						"imperial" "$ref:entity/fabbed/dimension-collection/standard-imperial-thread-sizes/options"
 					}
 				},
 				{
