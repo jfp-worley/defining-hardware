@@ -54,8 +54,8 @@ e.g.
 					"name": "thread size",
 					"description": "Screw thread sizes.",
 					"options": {
-						"metric": "$ref:entity/fabbed/dimension-collection/standard-metric-thread-sizes/options",
-						"imperial" "$ref:entity/fabbed/dimension-collection/standard-imperial-thread-sizes/options"
+						"metric": ["$ref:entity/fabbed/dimension-collection/standard-metric-thread-sizes/options"],
+						"imperial": ["$ref:entity/fabbed/dimension-collection/standard-imperial-thread-sizes/options"]
 					}
 				},
 				{
