@@ -1,0 +1,110 @@
+
+[HARDWARE DOCUMENT - extends specification]
+
+{
+	"name": "value",
+	"identifier": "value",
+	"description": "string",
+	"version": "1.0.0",
+	"hardware-type": "value",
+	"options": {
+		"choices": {},
+		"sizes": {},
+		"material": {}
+	},
+	"schema": "$ref:schema/fabbed/product"
+}
+
+e.g.
+
+{
+	"name": "screw",
+	"identifier": "screw",
+	"description": "string",
+	"version": "1.0.0",
+	"hardware-type": "$ref:schema/fabbed/hardware-family/fixings",
+	"options": {
+		"choices": {
+			"name": "choices",
+			"description": "choices of screw",
+			"values": [
+				{
+					"name": "cap head screw",
+					"identifier": "CHP",
+					"description": "Cap Head Screws feature a cylindrical head shape."
+				},
+				{
+					"name": "counter sunk screw",
+					"identifier": "CSS",
+					"description": "Countersunk Screws feature a countersunk head, which allows them to sit flush against a target housing."
+				},
+				{
+					"name": "button head screw",
+					"identifier": "BHS",
+					"description": "Button Head Screws are feature a low-profile domed head. Due to their unique head shape, these fasteners are sometimes called Dome Screws or Round Head Screws. Button Head Screws have a relatively large head diameter, which allows for a larger drive type to be used."
+				}
+			],
+		},
+		"sizes": {
+			"names": "sizes",
+			"description": "screw sizes",
+			"values": [
+				{
+					"name": "thread size",
+					"description": "Screw thread sizes.",
+					"options": {
+						"metric": "$ref:entity/fabbed/dimension-collection/standard-metric-thread-sizes",
+						"imperial" "$ref:entity/fabbed/dimension-collection/standard-imperial-thread-sizes"
+					}
+				},
+				{
+					"name": "head diameter",
+					"description": "screw head diameter",
+					"options": {
+						"unit-system": {
+							"metric": "$ref:entity/fabbed/unit/mm",
+							"imperial": "$ref:entity/fabbed/unit/inch"
+						},
+					"quantity": "value"
+					}
+				},
+				{
+					"name": "shaft length",
+					"description": "length of screw shaft excluding screw head",
+					"options": {
+						"unit-system": {
+							"metric": "$ref:entity/fabbed/unit/mm",
+							"imperial": "$ref:entity/fabbed/unit/inch"
+						},
+					"quantity": "value"
+					}
+				},
+			]
+		},
+		"material": {
+			"name": "materials",
+			"description": "material choices",
+			"values": [
+				{
+					"name": "Stainless steel",
+					"description": "$ref:entity/fabbed/material/stainless-steel",
+					"options": {
+						"grade": {
+							"$ref:entity/fabbed/material/stainless-steel/options/grades"
+						}
+					}
+				},
+				{
+					"name": "aluminium",
+					"description": "$ref:entity/fabbed/material/stainless-steel",
+					"options": {
+						"grade": {
+							"$ref:entity/fabbed/material/aluminium/options/grades"
+						}
+					}
+				}
+			]
+		}	
+	},
+	"schema": "$ref:schema/fabbed/product"
+}
