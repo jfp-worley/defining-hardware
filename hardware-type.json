@@ -1,0 +1,42 @@
+
+[[HARDWARE-TYPE extends Specification]] >>>>> Identical to MATERIAL-TYPE - could be one schema: TYPE?
+
+	{
+		"name": "string",
+		"identifier": "string",
+		"description": "string",
+		"version": "1.0.0",
+		"options": {
+			"hardware-family": {
+				"name": "hardware-family",
+				"description": "Families of hardware for classification purposes",
+				"values": [
+					{
+						"string"
+					}
+				],
+			}
+		},
+		"schema": "$ref:schema/fabbed/hardware-type"
+	}
+
+e.g.
+
+	{
+		"name": "Screws",
+		"identifier": "screw",
+		"description": "Short, slender, sharp-pointed metal pins with a raised helical thread running around it and a slotted head, used to join things together by being rotated so that it pierces wood or other material and is held tightly in place.",
+		"version": "1.0.0",
+		"options": {
+			"hardware-family": {
+				"name": "hardware-family",
+				"description": "Families of hardware for classification purposes",
+				"values": [
+					{
+						"$ref:entity/fabbed/hardware-type/fixings"
+					}
+				],
+			}
+		},
+		"schema": "$ref:schema/fabbed/hardware-type"
+	}

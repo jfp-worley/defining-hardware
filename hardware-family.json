@@ -1,0 +1,24 @@
+
+[[HARDWARE-FAMILY extends Specification]] >>>>> Identical to MATERIAL-FAMILY - could be one schema: FAMILY?
+
+	{
+		"name": "string",
+		"identifier": "string",
+		"description": "string",
+		"version": "1.0.0",
+		"options": {},
+		"schema": "$ref:schema/fabbed/hardware-family"
+	}
+
+e.g.
+
+	{
+		"name": "Fixings",
+		"identifier": "fixings",
+		"description": "Hardware used to fasten components in place.",
+		"version": "1.0.0",
+		"options": {},
+		"schema": "$ref:schema/fabbed/hardware-family"
+	}
+
+
