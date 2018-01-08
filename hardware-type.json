@@ -33,7 +33,7 @@ e.g.
 				"description": "Families of hardware for classification purposes",
 				"values": [
 					{
-						"$ref:entity/fabbed/hardware-type/fixings"
+						"$ref:entity/fabbed/hardware-family/fixings"
 					}
 				],
 			}
