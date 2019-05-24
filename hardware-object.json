@@ -1,0 +1,117 @@
+[HARDWARE OBJECT - extends quantifiable-entity]
+
+{
+	"name": "string",
+	"identifier": "string",
+	"description": "string",
+	"version": "1.0.0",
+	"type": "value",
+	"options": {
+		"choices": {},
+		"sizes": {},
+		"material": {},
+		"properties": {},
+		"manufacturing-standard": {}
+	},
+	"supplier": "value",
+	"source": "value",
+	"geo-segment": [],
+	"schema": "$ref:schema/fabbed/product"
+}
+
+e.g.
+
+{
+	"name": "M5 X 55mm Cap Head Screw",
+	"identifier": "m5-x-55mm-cap-head-screw",
+	"description": "string",
+	"version": "1.0.0",
+	"type": "value",
+	"options": {
+		"choices": {
+			"name": "choices",
+			"description": "choices of screw",
+			"values": [
+				{
+					"name": "cap head screw",
+					"identifier": "CHP",
+					"description": "Cap Head Screws feature a cylindrical head shape."
+				}
+			]	
+		},
+		"sizes": {
+			"names": "sizes",
+			"description": "screw sizes",
+			"values": [
+				{
+					"name": "thread size",
+					"description": "Screw thread sizes.",
+					"options": {
+						"metric": ["$ref:entity/fabbed/dimension-collection/standard-metric-thread-sizes/options/M5"]
+					}
+				},
+				{
+					"name": "head diameter",
+					"description": "screw head diameter",
+					"options": {
+						"unit-system": {
+							"metric": "$ref:entity/fabbed/unit/mm"
+						},
+					"quantity": "8.5"
+					}
+				},
+				{
+					"name": "shaft length",
+					"description": "length of screw shaft excluding screw head",
+					"options": {
+						"unit-system": {
+							"metric": "$ref:entity/fabbed/unit/mm"
+						},
+					"quantity": "55"
+					}
+				}
+			]
+		},	
+		"material": {
+			"name": "materials",
+			"description": "material choices",
+			"values": [
+				{
+					"name": "Stainless steel",
+					"description": "$ref:entity/fabbed/material/stainless-steel",
+					"options": {
+						"grade": {
+							"$ref:entity/fabbed/material/stainless-steel/options/grades/a2"
+						}
+					}
+				}
+			]
+		},		
+		"properties": {},
+		"manufacturing-standard": {
+			"name": "manufacturing-standard",
+			"description": "List of manufacturing standards.",
+			"values": [
+				{
+					"name": "din",
+					"description": "$ref:entity/fabbed/manufacturing-standard/din", 
+					"options": {
+						"grade": {
+							"$ref:entity/fabbed/manufacturing-standard/din/options/grades/din912"
+						}
+					}
+				}
+			]	
+		}
+	},
+	"supplier": "$ref:entity/fabbed/supplier/accu-group",
+	"source":"https://www.accu.co.uk/en/cap-head-screws/184562-SSC-M5-55-AL",
+	"geo-segment": [
+		{
+			"name": "global",
+			"shortcode": "GBL",
+			"description": "Available everywhere"
+		}
+	],
+	"schema": "$ref:schema/fabbed/product"
+}
